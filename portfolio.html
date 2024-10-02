@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CvGenerateBD - Free CV Maker BD</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/hero.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- navbar start -->
+      <nav
+        id="navbar_top"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      >
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="index.html">
+            <img
+              style="width: 200px; height: 44px"
+              src="/assets/img/logo/Cv-maker-logo.png"
+              alt="logo"
+            />
+          </a>
+          <!-- Offcanvas Toggler for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Regular Navbar for Desktop -->
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex gap-5"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CV
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">CV Templates</a></li>
+                  <li><a class="dropdown-item" href="#">CV Generate</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Portfolio Templates</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Portfolio Generate</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a
+                href="login.html"
+                class="btn btn-outline-success px-4"
+                type="submit"
+              >
+                Login
+              </a>
+              <a
+                href="signUp.html"
+                class="btn gradient-bg text-white border-0 px-4"
+                type="submit"
+              >
+                Sign Up
+              </a>
+            </div>
+          </div>
+
+          <!-- Offcanvas for Mobile -->
+          <div
+            class="offcanvas offcanvas-end d-lg-none"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    CV
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">CV Templates</a></li>
+                    <li><a class="dropdown-item" href="#">CV Generate</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Portfolio
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Portfolio Templates</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Portfolio Generate</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+              <div class="d-flex gap-2">
+                <a
+                  href="login.html"
+                  class="btn btn-outline-success px-4"
+                  type="submit"
+                >
+                  Login
+                </a>
+                <a
+                  href="signUp.html"
+                  class="btn gradient-bg text-white border-0 px-4"
+                  type="submit"
+                >
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner start -->
+      <section style="height: 50vh">
+        <div
+          class="container-fluid pt-5 d-flex justify-content-center align-items-center h-100 bg-primary"
+        >
+          <div class="text-center pt-5">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <h1>Portfolio</h1>
+    </main>
+    <footer>
+      <div class="pt-5 px-4">
+        <div class="text-center text-lg-start text-white">
+          <!-- Grid container -->
+          <div class="p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-capitalize">CvGenerateBD</h5>
+
+                  <p class="fs-6 pt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae modi cum ipsam ad obcaecati.
+                  </p>
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <!-- Email -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+
+                    <!-- Linkedin -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Get started</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Terms of Service</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Cookie Preferences</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">About us</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Company </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Careers </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Reviews </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Help</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Payment</h5>
+
+                  <div class="list-unstyled mb-0">
+                    <div>
+                      <img
+                        class="img-fluid rounded"
+                        src="/assets/img/png-transparent-paypal.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr class="mb-4" />
+            <!-- Section: CTA -->
+            <section
+              class="d-flex flex-column flex-md-row flex-lg-row align-items-center justify-content-between copyright"
+            >
+              <!-- Copyright -->
+              <div class="text-center p-3">
+                © 2024 Copyright:
+                <a class="text-white text-decoration-none" href="#"
+                  >CvGenerateBD.com</a
+                >
+              </div>
+              <!-- Copyright -->
+              <p>
+                More than a cv maker.
+                <span class="text-white">CvGenerateBD.com</span> is a part of
+                <a
+                  class="e text-white text-decoration-none fw-bold"
+                  href="https://hellocodersbd.xyz"
+                  ><span class="text-info"
+                    >He<span class="text-secondary">//</span>o</span
+                  ><span class="text-danger">Coders BD</span></a
+                >
+                product ecosystem
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/hero-carousel.js"></script>
+    <script src="./assets/js/featuredCv.js"></script>
+    <script src="./assets/js/navbarTop.js"></script>
+  </body>
+</html>

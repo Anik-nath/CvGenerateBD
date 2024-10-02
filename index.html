@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CvGenerateBD - Free CV Maker BD</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/hero.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- navbar start -->
+      <nav
+        id="navbar_top"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      >
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="index.html">
+            <img
+              style="width: 200px; height: 44px"
+              src="/assets/img/logo/Cv-maker-logo.png"
+              alt="logo"
+            />
+          </a>
+          <!-- Offcanvas Toggler for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Regular Navbar for Desktop -->
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex gap-5"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CV
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">CV Templates</a></li>
+                  <li><a class="dropdown-item" href="#">CV Generate</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Portfolio Templates</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Portfolio Generate</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a
+                href="login.html"
+                class="btn btn-outline-success px-4"
+                type="submit"
+              >
+                Login
+              </a>
+              <a
+                href="signUp.html"
+                class="btn gradient-bg text-white border-0 px-4"
+                type="submit"
+              >
+                Sign Up
+              </a>
+            </div>
+          </div>
+
+          <!-- Offcanvas for Mobile -->
+          <div
+            class="offcanvas offcanvas-end d-lg-none"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    CV
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">CV Templates</a></li>
+                    <li><a class="dropdown-item" href="#">CV Generate</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Portfolio
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Portfolio Templates</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Portfolio Generate</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact.html">Contact Us</a>
+                </li>
+              </ul>
+              <div class="d-flex gap-2">
+                <a
+                  href="login.html"
+                  class="btn btn-outline-success px-4"
+                  type="submit"
+                >
+                  Login
+                </a>
+                <a
+                  href="signUp.html"
+                  class="btn gradient-bg text-white border-0 px-4"
+                  type="submit"
+                >
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner start -->
+      <section class="banner">
+        <div class="container-fluid px-5 py-4">
+          <div class="banner-slider row px-2">
+            <!-- hero content -->
+            <div
+              class="banner-content col-md-6 col-lg-6 col-12 align-self-center"
+            >
+              <h1 class="display-4 fw-bold">
+                Generate a <span class="highlight-text">Perfect CV</span> That
+                Lands the Job You Want
+              </h1>
+              <p class="py-3 fs-5">
+                We make it easy to create a great cv. Pick from different
+                templates and follow simple steps to build a job-ready portfolio
+                without the hassle.
+              </p>
+              <button
+                class="btn gradient-bg text-white py-2 px-5 fw-bold text-capitalize"
+              >
+                <span>Build your CV</span>
+              </button>
+            </div>
+            <!-- slider -->
+            <div
+              class="swiper mySwiper col-md-6 col-lg-6 col-12 align-self-center justify-self-end"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide shadow">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (4).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+                <div class="swiper-slide shadow">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (2).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+                <div class="swiper-slide shadow">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (3).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+                <div class="swiper-slide shadow">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (1).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+                <div class="swiper-slide shadow">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (5).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- how it works -->
+      <section id="howItWorks" class="my-5 pb-5">
+        <div class="container-fluid px-5">
+          <h6 class="text-capitalize text-center">
+            <span class="fw-bold px-4 py-1 rounded">How it works</span>
+          </h6>
+          <h2
+            class="text-capitalize text-center fs-2 fw-bold highlight-text py-3"
+          >
+            Easy Steps To Build your Resume
+          </h2>
+          <div class="row row-cols-2 row-cols-md-4 g-4 pt-3 text-center">
+            <div class="col">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center gradient-bg border-0"
+              >
+                <img
+                  class="img-fluid p-3"
+                  src="/assets/img/icons/icon (1).png"
+                  alt=""
+                />
+                <h6 class="py-2 text-white">
+                  Step Num <span class="fw-bold">#1</span>
+                </h6>
+
+                <h5 class="text-white pb-2">Create your Account</h5>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center gradient-bg border-0"
+              >
+                <img
+                  class="img-fluid p-3"
+                  src="/assets/img/icons/icon (2).png"
+                  alt=""
+                />
+                <h6 class="py-2 text-white">
+                  Step Num <span class="fw-bold">#1</span>
+                </h6>
+
+                <h5 class="text-white pb-2">Create your Account</h5>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center gradient-bg border-0"
+              >
+                <img
+                  class="img-fluid p-3"
+                  src="/assets/img/icons/icon (3).png"
+                  alt=""
+                />
+                <h6 class="py-2 text-white">
+                  Step Num <span class="fw-bold">#1</span>
+                </h6>
+
+                <h5 class="text-white pb-2">Create your Account</h5>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card d-flex flex-column justify-content-center align-items-center gradient-bg border-0"
+              >
+                <img
+                  class="img-fluid p-3"
+                  src="/assets/img/icons/icon (4).png"
+                  alt=""
+                />
+                <h6 class="py-2 text-white">
+                  Step Num <span class="fw-bold">#1</span>
+                </h6>
+
+                <h5 class="text-white pb-2">Create your Account</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- featured cv -->
+      <section id="featured-cv" class="my-3 py-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 mx-auto text-center pb-4">
+              <h6 class="text-capitalize text-center">
+                <span class="fw-bold px-4 py-1 rounded"
+                  >Featured Templates</span
+                >
+              </h6>
+              <h2
+                class="text-capitalize text-center fs-2 fw-bold highlight-text py-3"
+              >
+                Choose a Template, and Let’s Generate Your CV in Minutes
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper featuredCVSwiper container-fluid px-5 py-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (1).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (2).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (3).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (4).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (5).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card rounded shadow border-0">
+                <div class="card-body rounded">
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/cv/cv (1).jpg"
+                    alt="cv demo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <button class="btn gradient-bg text-white text-capitalize py-2">
+            Choose More Template
+          </button>
+        </div>
+      </section>
+      <!-- whyUS -->
+      <section id="whyUS" class="my-3 py-5">
+        <div class="container-fluid px-5">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-12">
+              <h2
+                class="text-capitalize text-left fs-2 fw-bold highlight-text py-3"
+              >
+                Why Use The "CvGenerateBD" CV Builder
+              </h2>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6"
+                    >Proven CV Templates to increase Hiring Chance</span
+                  >
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6">Creative and Clean Templates Design</span>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6">Easy and Intuitive Online CV Builder</span>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6"
+                    >Free to use. Developed by hiring professionals.</span
+                  >
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6">Fast Easy CV and Resume Formatting</span>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <span
+                    ><i
+                      style="width: 40px; height: 40px"
+                      class="fas fa-check border highlight-text fs-2 p-1 rounded-circle"
+                    ></i
+                  ></span>
+                  <span class="fs-6">Recruiter Approved Phrases.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-12">
+              <img
+                class="img-fluid py-4"
+                src="/assets/img/desktop.webp"
+                alt="portfolio"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section id="faq" class="py-5 bg-light">
+        <div class="container-fluid px-5">
+          <h6 class="text-capitalize text-center">
+            <span class="fw-bold px-4 py-1 rounded">FAQs</span>
+          </h6>
+          <h2
+            class="text-capitalize text-center fs-2 fw-bold highlight-text py-3"
+          >
+            Find your answer
+          </h2>
+          <div class="row">
+            <div class="col-md-8 col-12 mx-auto">
+              <div class="card border-0">
+                <div class="card-body">
+                  <div class="accordion w-100 h-100" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          How do I create a CV on CVGenerateBD?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <strong
+                            >Creating a CV on CVGenerateBD is simple!</strong
+                          >
+                          All you need to do is sign up for an account, choose a
+                          template, and fill in your personal details,
+                          education, work experience, skills, and other relevant
+                          sections. Once done, you can preview and download your
+                          CV in PDF format.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Is CVGenerateBD free to use?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Yes, CVGenerateBD offers both free and premium
+                          options. You can create a professional CV using the
+                          free templates available. However, premium users can
+                          access additional templates, advanced design options,
+                          and customization features.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Can I edit my CV after downloading it?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Once you download your CV in PDF format, it cannot be
+                          directly edited. However, you can return to
+                          CVGenerateBD, log in to your account, and make any
+                          changes to your saved CV. After that, you can download
+                          the updated version.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          Can I use my CV for multiple job applications?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Absolutely! You can create different versions of your
+                          CV tailored to specific job applications. You can
+                          easily duplicate your existing CV, make the necessary
+                          changes, and download the new version. This ensures
+                          that your CV is relevant to each job you apply for.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          What types of CV templates are available on
+                          CVGenerateBD?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          CVGenerateBD offers a variety of CV templates,
+                          including traditional, modern, and creative designs.
+                          Each template is designed to cater to different
+                          industries and job roles, ensuring that you can find
+                          the perfect format for your needs.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="pt-5 px-4">
+        <div class="text-center text-lg-start text-white">
+          <!-- Grid container -->
+          <div class="p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-capitalize">CvGenerateBD</h5>
+
+                  <p class="fs-6 pt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae modi cum ipsam ad obcaecati.
+                  </p>
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <!-- Email -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+
+                    <!-- Linkedin -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Get started</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Terms of Service</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Cookie Preferences</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">About us</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Company </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Careers </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Reviews </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Help</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Payment</h5>
+
+                  <div class="list-unstyled mb-0">
+                    <div>
+                      <img
+                        class="img-fluid rounded"
+                        src="/assets/img/png-transparent-paypal.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr class="mb-4" />
+            <!-- Section: CTA -->
+            <section
+              class="d-flex flex-column flex-md-row flex-lg-row align-items-center justify-content-between copyright"
+            >
+              <!-- Copyright -->
+              <div class="text-center p-3">
+                © 2024 Copyright:
+                <a class="text-white text-decoration-none" href="#"
+                  >CvGenerateBD.com</a
+                >
+              </div>
+              <!-- Copyright -->
+              <p>
+                More than a cv maker.
+                <span class="text-white">CvGenerateBD.com</span> is a part of
+                <a
+                  class="e text-white text-decoration-none fw-bold"
+                  href="https://hellocodersbd.xyz"
+                  ><span class="text-info"
+                    >He<span class="text-secondary">//</span>o</span
+                  ><span class="text-danger">Coders BD</span></a
+                >
+                product ecosystem
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/hero-carousel.js"></script>
+    <script src="./assets/js/featuredCv.js"></script>
+    <script src="./assets/js/navbarTop.js"></script>
+  </body>
+</html>

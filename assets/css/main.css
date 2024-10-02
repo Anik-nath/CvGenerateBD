@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.gradient-bg {
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+}
+.gradient-bg:hover {
+  cursor: pointer;
+  background: linear-gradient(-90deg, #00c8aa, #00aac8);
+}
+.btn-outline-success {
+  border-color: #00aac8 !important;
+  color: #000;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+}
+#featured-cv {
+  background-image: url("/assets/img/banner3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner {
+  background-image: url("/assets/img/banner3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.highlight-text {
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-item .active {
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  z-index: 1;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #00aac8;
+}
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+}
+
+.contact-details i{
+  background: -webkit-linear-gradient(#00c8aa, #00aac8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+}
+
+footer,
+.other-page-background {
+  background: linear-gradient(to bottom, #00c8aa, #00aac8, #0f141e);
+}
+.list-unstyled li {
+  padding: 6px 0px;
+}
+.list-unstyled li a {
+  text-decoration: none;
+  color: #ffffff9f;
+}
+.copyright {
+  font-size: 12px;
+  color: #ffffff9f;
+}
+/* login form style */
+.glass-form {
+  background: rgba(255, 255, 255, 0.719);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+.banner-slider{
+  height: 100vh;
+}
+
+.contact-form{
+  background-image: url('/assets/img/background/bg\ \(1\).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* responsiveness */
+@media only screen and (max-width: 768px) {
+  .banner-content {
+    padding: 80px 0px;
+  }
+  .banner-slider{
+    height: auto;
+  }
+  #howItWorks .card h5{
+    font-size: 14px;
+  }
+}
