@@ -50,6 +50,18 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
   color: #00aac8;
 }
+#portfolio-page .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #333 !important;
+  background: #ccc;
+}
+#portfolio-page .nav-link:hover {
+background: #a7a6a6 !important;
+}
+.home-tab{
+  background-image: url('/assets/img/5594016-e1656071131636.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .accordion-button:not(.collapsed) {
   color: #fff;
   background: linear-gradient(90deg, #00c8aa, #00aac8);
