@@ -50,15 +50,16 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
   color: #00aac8;
 }
-#portfolio-page .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+#portfolio-page .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   color: #333 !important;
   background: #ccc;
 }
 #portfolio-page .nav-link:hover {
-background: #a7a6a6 !important;
+  background: #a7a6a6 !important;
 }
-.home-tab{
-  background-image: url('/assets/img/5594016-e1656071131636.jpg');
+.home-tab {
+  background-image: url("/assets/img/5594016-e1656071131636.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -67,7 +68,7 @@ background: #a7a6a6 !important;
   background: linear-gradient(90deg, #00c8aa, #00aac8);
 }
 
-.contact-details i{
+.contact-details i {
   background: -webkit-linear-gradient(#00c8aa, #00aac8);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -106,24 +107,77 @@ footer,
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: none;
 }
-.banner-slider{
+.banner-slider {
   height: 100vh;
 }
 
-.contact-form{
-  background-image: url('/assets/img/background/bg\ \(1\).jpg');
+.contact-form {
+  background-image: url("/assets/img/background/bg\ \(1\).jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+/* timeline */
+.timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #dee2e6;
+}
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+}
+.timeline-item.left {
+  text-align: right;
+  padding-right: 2rem;
+}
+.timeline-item.right {
+  text-align: left;
+  padding-left: 2rem;
+}
+.timeline-item .timeline-marker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  z-index: 1;
 }
 /* responsiveness */
 @media only screen and (max-width: 768px) {
   .banner-content {
     padding: 80px 0px;
   }
-  .banner-slider{
+  .banner-slider {
     height: auto;
   }
-  #howItWorks .card h5{
+  #howItWorks .card h5 {
     font-size: 14px;
+  }
+  .timeline-item .timeline-marker{
+    width: 20px;
+    height: 20px;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    text-align: left;
+    padding: 0;
+  }
+  .timeline::before {
+    left: -24px;
+  }
+  .timeline-item .timeline-marker {
+    left: -34px;
+    transform: none;
   }
 }
