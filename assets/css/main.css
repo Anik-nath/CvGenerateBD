@@ -1,3 +1,4 @@
+/*---------- Global Styles ----------*/
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +6,31 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------- Button Styles ----------*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 48px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  color: white;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+#myBtn:hover {
+  background: linear-gradient(90deg, #00aac8, #00c8aa);
+}
+
+/*---------- Gradient Backgrounds ----------*/
 .gradient-bg {
   background: linear-gradient(90deg, #00c8aa, #00aac8);
 }
@@ -12,6 +38,8 @@ body {
   cursor: pointer;
   background: linear-gradient(-90deg, #00c8aa, #00aac8);
 }
+
+/*---------- Button Outline Styles ----------*/
 .btn-outline-success {
   border-color: #00aac8 !important;
   color: #000;
@@ -20,22 +48,24 @@ body {
   color: #fff;
   background: linear-gradient(90deg, #00c8aa, #00aac8);
 }
-#featured-cv {
-  background-image: url("/assets/img/banner3.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
+/*---------- Banner Section ----------*/
+#featured-cv,
 .banner {
   background-image: url("/assets/img/banner3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*---------- Highlighted Text ----------*/
 .highlight-text {
   background: linear-gradient(90deg, #00c8aa, #00aac8);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/*---------- Navbar Styles ----------*/
 .nav-item .active {
   background: linear-gradient(90deg, #00c8aa, #00aac8);
   -webkit-background-clip: text;
@@ -50,6 +80,8 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
   color: #00aac8;
 }
+
+/*---------- Portfolio Section ----------*/
 #portfolio-page .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #333 !important;
@@ -58,16 +90,21 @@ body {
 #portfolio-page .nav-link:hover {
   background: #a7a6a6 !important;
 }
+
+/*---------- Home Tab Styles ----------*/
 .home-tab {
   background-image: url("/assets/img/5594016-e1656071131636.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*---------- Accordion Styles ----------*/
 .accordion-button:not(.collapsed) {
   color: #fff;
   background: linear-gradient(90deg, #00c8aa, #00aac8);
 }
 
+/*---------- Contact Details ----------*/
 .contact-details i {
   background: -webkit-linear-gradient(#00c8aa, #00aac8);
   background-clip: text;
@@ -75,6 +112,7 @@ body {
   font-size: 24px;
 }
 
+/*---------- Footer Section ----------*/
 footer,
 .other-page-background {
   background: linear-gradient(to bottom, #00c8aa, #00aac8, #0f141e);
@@ -90,7 +128,8 @@ footer,
   font-size: 12px;
   color: #ffffff9f;
 }
-/* login form style */
+
+/*---------- Login Form Styles ----------*/
 .glass-form {
   background: rgba(255, 255, 255, 0.719);
   border-radius: 16px;
@@ -107,16 +146,20 @@ footer,
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: none;
 }
+
+/*---------- Banner Slider ----------*/
 .banner-slider {
   height: 100vh;
 }
 
+/*---------- Contact Form ----------*/
 .contact-form {
   background-image: url("/assets/img/background/bg\ \(1\).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* timeline */
+
+/*---------- Timeline Styles ----------*/
 .timeline {
   position: relative;
   padding: 1rem 0;
@@ -152,8 +195,56 @@ footer,
   background-color: #ccc;
   border-radius: 50%;
   z-index: 1;
+  border: 4px solid #ddd;
 }
-/* responsiveness */
+
+/*---------- Skills Section ----------*/
+#skills-tab .card:hover {
+  background-color: #ffffff3f;
+  transform: translateY(-8px);
+  animation: skills-tab-hoverEffect 0.5s ease;
+  cursor: pointer;
+}
+#home-tab a:hover {
+  background-color: #ccc;
+  color: #00aac8;
+  animation: skills-tab-hoverEffect 0.5s ease;
+}
+@keyframes skills-tab-hoverEffect {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/*---------- Section Title Styles ----------*/
+.section-title {
+  position: relative;
+}
+.section-title::before {
+  content: "";
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 250px;
+}
+.section-title:after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 30px);
+}
+
+/*---------- Responsiveness ----------*/
 @media only screen and (max-width: 768px) {
   .banner-content {
     padding: 80px 0px;
@@ -164,9 +255,11 @@ footer,
   #howItWorks .card h5 {
     font-size: 14px;
   }
-  .timeline-item .timeline-marker{
+  .timeline-item .timeline-marker {
     width: 20px;
     height: 20px;
+    left: -34px;
+    transform: none;
   }
   .timeline-item.left,
   .timeline-item.right {
@@ -175,9 +268,5 @@ footer,
   }
   .timeline::before {
     left: -24px;
-  }
-  .timeline-item .timeline-marker {
-    left: -34px;
-    transform: none;
   }
 }
