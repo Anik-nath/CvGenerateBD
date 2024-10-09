@@ -229,6 +229,15 @@ body {
   /* display: flex; */
   /* gap: 50px; */
 }
+.cv-container-1 {
+  width: 210mm;
+  min-height: 297mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* To contain the absolutely positioned circles */
+  z-index: 1;
+  display: flex;
+ gap: 50px;
+}
 .cv-container-2 {
   width: 210mm;
   min-height: 297mm;
@@ -294,7 +303,7 @@ body {
 }
 /*--------------- Right column----------------- */
 .cv-right-column {
-  width: 60%;
+  width: 60%
 }
 .cv-right-column-2 {
   width: 60%;
@@ -340,6 +349,15 @@ ul {
   padding-right: 10px;
 }
 
+.personal-contact .contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+}
 .personal-contact-2 .contact-details {
   display: flex;
   align-items: center;
@@ -359,12 +377,7 @@ ul {
   font-size: 12px;
   width: 100%;
 }
-/* .personal-contact-3 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 40px;
-  padding-top: 16px;
-} */
+
 
 .icon-box {
   width: 40px;
@@ -409,6 +422,11 @@ ul {
   color: #333;
   font-size: 15px;
   padding: 0px 10px;
+}
+.reference-container textarea{
+  border: none;
+  background: transparent;
+  color: #000;
 }
 .reference-container-2 {
   text-align: left;
