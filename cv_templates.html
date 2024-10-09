@@ -36,6 +36,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- animation library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
@@ -105,11 +115,7 @@
                       >CV Templates</a
                     >
                   </li>
-                  <li>
-                    <a class="dropdown-item" href="/cv_generate.html"
-                      >CV Generate</a
-                    >
-                  </li>
+                  <li><a class="dropdown-item" href="/cv_generate.html">CV Generate</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -191,11 +197,7 @@
                           >CV Templates</a
                         >
                       </li>
-                      <li>
-                        <a class="dropdown-item" href="/cv_generate.html"
-                          >CV Generate</a
-                        >
-                      </li>
+                      <li><a class="dropdown-item" href="/cv_generate.html">CV Generate</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -266,136 +268,136 @@
         <div
           class="container-fluid page-banner pt-5 d-flex justify-content-center align-items-center h-100"
         >
-          <h2>Contact With Us</h2>
+          <h2>CV Templates</h2>
         </div>
       </section>
     </header>
     <main>
-      <section class="container-fluid px-5 py-5 banner">
-        <div class="row py-5 mt-5">
-          <div class="contact-details mb-5 mb-md-0 col-md-6 col-12">
-            <div
-              class="d-flex flex-column gap-4 justify-content-between align-items-md-center align-items-start h-100"
-            >
-              <div class="d-flex flex-column gap-4">
-                <div>
-                  <h2 class="highlight-text">
-                    Have any questions<span class="display-3 fw-bold">?</span>
-                  </h2>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Delectus harum sit pariatur dolorum ducimus, velit tempora
-                    quod fugit? Aspernatur, quod.
-                  </p>
-                </div>
-                <div>
-                  <h5>Get in touch with us</h5>
-                </div>
-                <div class="d-flex flex-row align-items-center gap-2">
-                  <span><i class="fas fa-envelope"></i></span>
-                  <span>cvgeneratebd@gmail.com</span>
-                </div>
-                <div class="d-flex flex-row align-items-center gap-2">
-                  <span><i class="fas fa-phone"></i></span>
-                  <span>+880-12365489</span>
-                </div>
-                <div class="d-flex flex-row align-items-center gap-2">
-                  <span><i class="fas fa-map-marker-alt"></i></span>
-                  <span>Dhamrai,Dhaka 1350, Bangladesh</span>
-                </div>
-                <div class="pt-3">
-                  <h5>Social Connection</h5>
-                </div>
-                <div class="d-flex flex-row gap-4">
-                  <a
-                    href="https://www.facebook.com/Software.HelloCodersBd/"
-                    class="card p-3 text-decoration-none"
-                    class="card p-3"
-                  >
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                  <a
-                    href=""
-                    class="card p-3 text-decoration-none"
-                    class="card p-3"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@hellocodersbd7996"
-                    class="card p-3 text-decoration-none"
-                    class="card p-3"
-                  >
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                  <a
-                    href="https://hellocodersbd.xyz"
-                    class="card p-3 text-decoration-none"
-                  >
-                    <i class="fas fa-globe"></i>
-                  </a>
-                </div>
+      <div id="cv-template-page" class="container-fluid py-5 px-5">
+        <div class="row mt-4">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (1).jpg"
+                alt="Image 1"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-12">
-            <div class="rounded contact-form p-4">
-              <h3 class="text-center mb-4 text-white">Get In Touch</h3>
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label text-white">Name</label>
-                  <input
-                    type="name"
-                    class="form-control bg-light border-info"
-                    id="name"
-                    placeholder="Enter your name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label text-white"
-                    >Email address</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control bg-light border-info"
-                    id="email"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label text-white">Phone</label>
-                  <input
-                    type="phone"
-                    class="form-control bg-light border-info"
-                    id="phone"
-                    placeholder="Enter your phone"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label text-white"
-                    >Message</label
-                  >
-                  <textarea
-                    placeholder="Enter your message"
-                    class="form-control bg-light border-info"
-                    rows="5"
-                    name="message"
-                    id=""
-                  ></textarea>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <button
-                    type="submit"
-                    class="btn gradient-bg py-2 px-5 text-white"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="fade-down"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (2).jpg"
+                alt="Image 2"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="fade-up"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (3).jpg"
+                alt="Image 3"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="zoom-in"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (4).jpg"
+                alt="Image 4"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (5).jpg"
+                alt="Image 5"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="zoom-out"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (1).jpg"
+                alt="Image 6"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="fade-up"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (2).jpg"
+                alt="Image 7"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+            data-aos="fade-down"
+          >
+            <div class="image-card">
+              <img
+                class="img-fluid"
+                src="/assets/img/cv/cv (3).jpg"
+                alt="Image 8"
+              />
+              <div class="overlay">
+                <a href="#" class="btn gradient-bg text-white">Create My CV</a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer>
       <div class="pt-5 px-4">
@@ -536,5 +538,8 @@
     <script src="./assets/js/hero-carousel.js"></script>
     <script src="./assets/js/featuredCv.js"></script>
     <script src="./assets/js/navbarTop.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

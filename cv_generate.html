@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CvGenerateBD - Free CV Maker BD</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/hero.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- animation library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <!-- style for cv -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/timeline.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <header>
+      <!-- navbar start -->
+      <nav
+        id="navbar_top"
+        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      >
+        <div class="container-fluid px-5">
+          <a
+            data-aos="zoom-in"
+            data-aos-easing="ease-sine"
+            data-aos-duration="1000"
+            class="navbar-brand"
+            href="index.html"
+          >
+            <img
+              style="width: 200px; height: 46px"
+              src="/assets/img/logo/crop LOGO-CV-GEN-2.png"
+              alt="logo"
+            />
+          </a>
+          <!-- Offcanvas Toggler for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Regular Navbar for Desktop -->
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex gap-5"
+            id="navbarTogglerDemo02"
+          >
+            <ul
+              data-aos="fade-in-up"
+              data-aos-easing="ease-sine"
+              data-aos-duration="1000"
+              class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CV
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/cv_templates.html"
+                      >CV Templates</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/cv_generate.html"
+                      >CV Generate</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="ease-sine"
+              data-aos-duration="1000"
+              class="d-flex gap-2"
+            >
+              <a
+                href="login.html"
+                class="btn btn-outline-success px-4"
+                type="submit"
+              >
+                Login
+              </a>
+              <a
+                href="signUp.html"
+                class="btn gradient-bg text-white border-0 px-4"
+                type="submit"
+              >
+                Sign Up
+              </a>
+            </div>
+          </div>
+
+          <!-- Offcanvas for Mobile -->
+          <div
+            class="offcanvas offcanvas-end d-lg-none"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="offcanvas-body d-flex flex-column justify-content-between"
+            >
+              <div class="border border-end-0 border-start-0 py-3 pb-4">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown py-2">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      CV
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/cv_templates.html"
+                          >CV Templates</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/cv_generate.html"
+                          >CV Generate</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a class="nav-link" href="/about.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact Us</a>
+                  </li>
+                </ul>
+                <div class="d-flex gap-2 py-2">
+                  <a
+                    href="login.html"
+                    class="btn btn-outline-success px-4"
+                    type="submit"
+                  >
+                    Login
+                  </a>
+                  <a
+                    href="signUp.html"
+                    class="btn gradient-bg text-white border-0 px-4"
+                    type="submit"
+                  >
+                    Sign Up
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div class="d-flex flex-row gap-3">
+                  <a
+                    class="btn gradient-bg text-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a
+                    class="btn gradient-bg text-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a
+                    class="btn gradient-bg text-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    class="btn gradient-bg text-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-pinterest"></i
+                  ></a>
+                </div>
+                <p class="mb-0 py-3 text-muted">
+                  Email: cvgeneratebd@gmail.com
+                </p>
+                <p class="mb-0 text-muted">Phone: +987 1236 54997</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner start -->
+      <section style="height: 50vh">
+        <div
+          class="container-fluid page-banner pt-5 d-flex justify-content-center align-items-center h-100"
+        >
+          <h2>Generate your cv</h2>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="container-fluid mt-5 p-5">
+        <!-- Timeline for Progress -->
+        <div id="cv_generate_process" class="process_timeline">
+          <div class="col step active" id="step1" onclick="showStep(1)">
+            Account Settings
+          </div>
+          <div class="col-auto px-2 d-none d-md-flex">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <div class="col step" id="step2" onclick="showStep(2)">
+            CV Information
+          </div>
+          <div class="col-auto px-2 d-none d-md-flex">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <div class="col step" id="step3" onclick="showStep(3)">
+            Preview & Finalize
+          </div>
+          <div class="col-auto px-2 d-none d-md-flex">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <div class="col step" id="step4" onclick="showStep(4)">
+            Download CV
+          </div>
+        </div>
+
+        <form id="multiStepForm">
+          <!-- Step 1: Account Settings -->
+          <div
+            class="tab-content process-tab-content d-none"
+            id="step-1-content"
+          >
+            <div
+              class="container-fluid bg-white shadow p-md-5 px-3 py-4 rounded"
+            >
+              <form>
+                <!-- Account Information -->
+                <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                />
+
+                <div class="row g-3">
+                  <div class="col-md-4 col-12 p-3 rounded d-flex flex-column">
+                    <div class="mb-3">
+                      <label for="displayName" class="form-label"
+                        >Display Name</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="fas fa-user"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="displayName"
+                          placeholder="Enter your display name"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="fullName" class="form-label">Full Name</label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="fas fa-id-card"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fullName"
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="birthdate" class="form-label"
+                        >Birthdate</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="birthdate"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="pro-img" class="form-label"
+                        >Profile Image Link</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="fas fa-image"></i>
+                        </span>
+                        <input type="text" class="form-control" id="pro-img" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-md-8 col-12 p-3 rounded bg-white d-flex flex-column"
+                  >
+                    <ul class="nav nav-tabs" id="contactTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="main-contact-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#main-contact"
+                          type="button"
+                          role="tab"
+                          aria-controls="main-contact"
+                          aria-selected="true"
+                        >
+                          Main Contact
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="social-contact-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#social-contact"
+                          type="button"
+                          role="tab"
+                          aria-controls="social-contact"
+                          aria-selected="false"
+                        >
+                          Social Contact
+                        </button>
+                      </li>
+                    </ul>
+
+                    <div
+                      class="tab-content mt-3 flex-grow-1"
+                      id="contactTabContent"
+                    >
+                      <div
+                        class="tab-pane fade show active"
+                        id="main-contact"
+                        role="tabpanel"
+                        aria-labelledby="main-contact-tab"
+                      >
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fas fa-envelope"></i>
+                            </span>
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="email"
+                              placeholder="Enter your email"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="phone" class="form-label">Phone</label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fas fa-phone"></i>
+                            </span>
+                            <input
+                              type="tel"
+                              class="form-control"
+                              id="phone"
+                              placeholder="Enter your phone number"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="country" class="form-label"
+                            >Country</label
+                          >
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fas fa-globe"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="country"
+                              placeholder="Enter your country"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="city" class="form-label">City</label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fas fa-city"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="city"
+                              placeholder="Enter your city"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="address" class="form-label"
+                            >Address</label
+                          >
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="address"
+                              placeholder="Enter your address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="tab-pane fade"
+                        id="social-contact"
+                        role="tabpanel"
+                        aria-labelledby="social-contact-tab"
+                      >
+                        <div class="row">
+                          <!-- Website -->
+                          <div class="col-md-6 mb-3">
+                            <label for="website" class="form-label"
+                              >Portfolio</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fas fa-link"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="website"
+                                placeholder="Enter your website"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Twitter -->
+                          <div class="col-md-6 mb-3">
+                            <label for="twitter" class="form-label"
+                              >Twitter</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-twitter"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="twitter"
+                                placeholder="Enter your Twitter URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- LinkedIn -->
+                          <div class="col-md-6 mb-3">
+                            <label for="linkedin" class="form-label"
+                              >LinkedIn</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-linkedin"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="linkedin"
+                                placeholder="Enter your LinkedIn URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Facebook -->
+                          <div class="col-md-6 mb-3">
+                            <label for="facebook" class="form-label"
+                              >Facebook</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-facebook"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="facebook"
+                                placeholder="Enter your Facebook URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Skype -->
+                          <div class="col-md-6 mb-3">
+                            <label for="skype" class="form-label">Skype</label>
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-skype"></i>
+                              </span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="skype"
+                                placeholder="Enter your Skype username"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- GitHub -->
+                          <div class="col-md-6 mb-3">
+                            <label for="github" class="form-label"
+                              >GitHub</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-github"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="github"
+                                placeholder="Enter your GitHub URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- StackOverflow -->
+                          <div class="col-md-6 mb-3">
+                            <label for="stackoverflow" class="form-label"
+                              >StackOverflow</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-stack-overflow"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="stackoverflow"
+                                placeholder="Enter your StackOverflow URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Medium -->
+                          <div class="col-md-6 mb-3">
+                            <label for="medium" class="form-label"
+                              >Medium</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-medium"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="medium"
+                                placeholder="Enter your Medium URL"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Instagram -->
+                          <div class="col-md-6 mb-3">
+                            <label for="instagram" class="form-label"
+                              >Instagram</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-instagram"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="instagram"
+                                placeholder="Enter your Instagram URL"
+                              />
+                            </div>
+                          </div>
+                          <!-- other -->
+                          <div class="col-md-6 mb-3">
+                            <label for="other" class="form-label">Other</label>
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fab fa-instagram"></i>
+                              </span>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="other"
+                                placeholder="Enter your other URL"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="button"
+                  class="btn gradient-bg text-white mt-3"
+                  onclick="nextStep()"
+                >
+                  Save Settings & Next
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Step 2: CV information -->
+          <div class="tab-content process-tab-content" id="step-2-content">
+            <section
+              class="col-md-12 col-12 input-section bg-white p-md-5 px-3 py-4 shadow rounded"
+            >
+              <!-- About Me -->
+              <div class="row">
+                <div class="col-12">
+                  <h5><i class="fas fa-user"></i> About Me</h5>
+                  <textarea
+                    id="about-me"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Describe about yourself"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Skills Section -->
+              <div class="row my-4">
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-tools"></i> Skills</h5>
+                    <button
+                      id="add-skill"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="skills-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Skill Name"
+                        id="skill-1"
+                      />
+                      <textarea
+                        id="skill-desc-1"
+                        class="form-control"
+                        rows="2"
+                        placeholder="Description"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-language"></i> Languages</h5>
+                    <button
+                      id="add-language"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="languages-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Language"
+                        id="language-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="High/Medium/Low"
+                        id="level-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Work Experience Section -->
+              <div class="row my-4">
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-briefcase"></i> Work Experience</h5>
+                    <button
+                      id="add-experience"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="work-experience-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Job Title"
+                        id="job-title-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="2021 - present"
+                        id="year-1"
+                      />
+                      <textarea
+                        id="job-desc-1"
+                        class="form-control"
+                        rows="2"
+                        placeholder="Description"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-graduation-cap"></i> Education</h5>
+                    <button
+                      id="add-education"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="education-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Degree"
+                        id="degree-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Institution Name"
+                        id="institution-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Year"
+                        id="year-edu-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Certifications and Projects Section -->
+              <div class="row my-4">
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-certificate"></i> Certifications</h5>
+                    <button
+                      id="add-certification"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="certifications-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Certification Name"
+                        id="certification-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Issuing Organization"
+                        id="cert-org-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Year"
+                        id="cert-year-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-project-diagram"></i> Projects</h5>
+                    <button
+                      id="add-project"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+
+                  <div id="projects-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Project Name"
+                        id="project-1"
+                      />
+                      <textarea
+                        id="project-desc-1"
+                        class="form-control"
+                        rows="2"
+                        placeholder="Project Description"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- References Section -->
+              <div class="row my-4">
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h5><i class="fas fa-user-friends"></i> References</h5>
+                    <button
+                      id="add-reference"
+                      class="btn gradient-bg text-white mb-3"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <div id="references-container" class="mb-4">
+                    <div class="form-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Reference Name"
+                        id="reference-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Contact Information"
+                        id="contact-ref-1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div>
+                <button
+                  type="button"
+                  class="btn gradient-bg text-white"
+                  onclick="nextStep()"
+                >
+                  <i class="fas fa-save"></i> Save Settings & Next
+                </button>
+              </div>
+            </section>
+          </div>
+          <!-- Step 3: Preview & Finalize -->
+          <div
+            class="tab-content d-none process-tab-content"
+            id="step-3-content"
+          >
+            <div id="cv-preview" class="bg-white shadow p-3 rounded">
+              <section
+                id="studentCV"
+                class="bg-wanring col-md-10 col-12 input-section studentCV-box py-20 position-relative"
+              >
+                <div class="cv-container p-5">
+                  <!-- Gradient circles -->
+                  <div class="gradient-circle top-left-circle"></div>
+                  <div class="gradient-circle bottom-right-circle"></div>
+                  <!-- Gradient circles -->
+                  <div class="row w-full pb-2">
+                    <div class="col-9">
+                      <h5>Banking Specilst</h5>
+                      <h1 style="font-size: 60px" class="text-uppercase py-4">
+                        your name
+                      </h1>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <small>+123456987</small>
+                        </div>
+                        <div>
+                          <small>abcd@gmail.com</small>
+                        </div>
+                        <div>
+                          <small>address: hello coders bd</small>
+                        </div>
+                        <div>
+                          <small>www.website.com</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="profile-img-container border-circle">
+                        <img
+                          class="profile-img border-circle"
+                          src="./assets/img/profile-1.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pt-5">
+                    <div class="col-5">
+                      <div id="about me">
+                        <div id="title" class="d-flex justify-content-center">
+                          <span
+                            class="text-uppercase border border-secondary fs-4 fw-semibold px-3"
+                            >About me</span
+                          >
+                        </div>
+                        <div id="description" class="pt-4">
+                          <p>Describe about yourself</p>
+                        </div>
+                      </div>
+                      <div id="skills" class="py-5">
+                        <div id="title" class="d-flex justify-content-center">
+                          <span
+                            class="text-uppercase border border-secondary fs-4 fw-semibold px-3"
+                            >Skills</span
+                          >
+                        </div>
+                        <div class="pt-4">
+                          <h6>Financial Analysis</h6>
+                          <p>Description</p>
+                        </div>
+                        <div class="pt-4">
+                          <h6>Risk Assesments</h6>
+                          <p>Description</p>
+                        </div>
+                        <div class="pt-4">
+                          <h6>Data Analysis</h6>
+                          <p>Description</p>
+                        </div>
+                        <div class="pt-4">
+                          <h6>Customer Service</h6>
+                          <p>Description</p>
+                        </div>
+                      </div>
+                      <div id="languages">
+                        <div id="title" class="d-flex justify-content-center">
+                          <span
+                            class="text-uppercase border border-secondary fs-4 fw-semibold px-3"
+                            >languages</span
+                          >
+                        </div>
+                        <!-- language list here -->
+                        <div id="language-list" class="pt-4 d-flex flex-column">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h6>English</h6>
+                            <p>------------</p>
+                            <p>Level here</p>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h6>Spanish</h6>
+                            <p>------------</p>
+                            <p>Level here</p>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h6>Chinese</h6>
+                            <p>------------</p>
+                            <p>Level here</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-7 ps-4">
+                      <div id="experience" class="pb-5">
+                        <div id="title" class="d-flex justify-content-center">
+                          <span
+                            class="text-uppercase border border-secondary fs-4 fw-semibold px-3"
+                            >work experience</span
+                          >
+                        </div>
+                        <!-- experiences list here -->
+                        <div id="experience-list">
+                          <div class="pt-4">
+                            <div class="d-flex flex-column">
+                              <h6 class="m-0 text-capitalize">
+                                Assistant Branch manager
+                              </h6>
+                              <p>2021 <span>-</span> present</p>
+                            </div>
+                            <p>Description</p>
+                          </div>
+                          <div class="pt-4">
+                            <div class="d-flex flex-column">
+                              <h6 class="m-0 text-capitalize">
+                                Credit analyst
+                              </h6>
+                              <p>2021 <span>-</span> present</p>
+                            </div>
+                            <p>Description</p>
+                          </div>
+                          <div class="pt-4">
+                            <div class="d-flex flex-column">
+                              <h6 class="m-0 text-capitalize">
+                                Junior Financial Analysis
+                              </h6>
+                              <p>2021 <span>-</span> present</p>
+                            </div>
+                            <p>Description</p>
+                          </div>
+                          <div class="pt-4">
+                            <div class="d-flex flex-column">
+                              <h6 class="m-0 text-capitalize">
+                                Compliance Assistant
+                              </h6>
+                              <p>2021 <span>-</span> present</p>
+                            </div>
+                            <p>Description</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="edcuation">
+                        <div id="title" class="d-flex justify-content-center">
+                          <span
+                            class="text-uppercase border border-secondary fs-4 fw-semibold px-3"
+                            >education</span
+                          >
+                        </div>
+                        <!-- education list -->
+                        <div id="education-list">
+                          <div class="pt-4 d-flex flex-column">
+                            <h6 class="m-0 text-capitalize">
+                              Master of Business administraction (MBA)
+                            </h6>
+                            <h6>
+                              Instition Name /
+                              <span>2014 <span>-</span> 2015</span>
+                            </h6>
+                          </div>
+                          <div class="pt-4 d-flex flex-column">
+                            <h6 class="m-0 text-capitalize">
+                              Master of Business administraction (MBA)
+                            </h6>
+                            <h6>
+                              Instition Name /
+                              <span>2014 <span>-</span> 2015</span>
+                            </h6>
+                          </div>
+                          <div class="pt-4 d-flex flex-column">
+                            <h6 class="m-0 text-capitalize">
+                              Master of Business administraction (MBA)
+                            </h6>
+                            <h6>
+                              Instition Name /
+                              <span>2014 <span>-</span> 2015</span>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <button
+                type="button"
+                class="btn gradient-bg text-white mt-3"
+                onclick="nextStep()"
+              >
+                Finalize & Download
+              </button>
+            </div>
+          </div>
+          <!-- Step 4: Download CV -->
+          <div
+            class="tab-content d-none process-tab-content"
+            id="step-4-content"
+          >
+            <div class="bg-white shadow p-md-5 px-3 py-4 rounded">
+              <h3 class="my-5 text-center">Download Your CV</h3>
+              <div class="d-flex justify-content-center mt-3">
+                <div>
+                  <button type="button" class="btn gradient-bg text-white">
+                    <i class="fas fa-file-download"></i> Generate Portfolio
+                  </button>
+                </div>
+                <div class="mx-3">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    onclick="downloadPDF()"
+                  >
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="pt-5 px-4">
+        <div class="text-center text-lg-start text-white">
+          <!-- Grid container -->
+          <div class="p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-capitalize">CvGenerateBD</h5>
+
+                  <p class="fs-6 pt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae modi cum ipsam ad obcaecati.
+                  </p>
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <!-- Email -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+
+                    <!-- Linkedin -->
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="#!"
+                      role="button"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Get started</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Terms of Service</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Cookie Preferences</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">About us</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-white">Company </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Careers </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Reviews </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-white">Help</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase pb-4">Payment</h5>
+
+                  <div class="list-unstyled mb-0">
+                    <div>
+                      <img
+                        class="img-fluid rounded"
+                        src="/assets/img/png-transparent-paypal.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr class="mb-4" />
+            <!-- Section: CTA -->
+            <section
+              class="d-flex flex-column flex-md-row flex-lg-row align-items-center justify-content-between copyright"
+            >
+              <!-- Copyright -->
+              <div class="text-center p-3">
+                © 2024 Copyright:
+                <a class="text-white text-decoration-none" href="#"
+                  >CvGenerateBD.com</a
+                >
+              </div>
+              <!-- Copyright -->
+              <p>
+                More than a cv maker.
+                <span class="text-white">CvGenerateBD.com</span> is a part of
+                <a
+                  class="e text-white text-decoration-none fw-bold"
+                  href="https://hellocodersbd.xyz"
+                  ><span class="text-info"
+                    >He<span class="text-secondary">//</span>o</span
+                  ><span class="text-danger">Coders BD</span></a
+                >
+                product ecosystem
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/hero-carousel.js"></script>
+    <script src="./assets/js/featuredCv.js"></script>
+    <script src="./assets/js/navbarTop.js"></script>
+    <script src="./assets/js/cv_generate_process.js"></script>
+    <script src="./assets/js/cv_information.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -56,7 +56,12 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.page-banner {
+  background-image: url("/assets/img/background/CV\ Templates.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 /*---------- Highlighted Text ----------*/
 .highlight-text {
   background: linear-gradient(90deg, #00c8aa, #00aac8);
@@ -110,6 +115,34 @@ html {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 24px;
+}
+/*---------- Cv generate tab --------*/
+.process_timeline {
+  display: flex;
+  justify-content: space-between; /* Adjusted for mobile responsiveness */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.process_timeline .step {
+  border-radius: 6px;
+  text-align: center;
+  padding: 10px;
+  flex-grow: 1;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  border-bottom: 2px solid #ccc;
+}
+
+.process_timeline .step.active {
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  color: #fff;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
 
 /*---------- Footer Section ----------*/
@@ -247,6 +280,48 @@ footer,
   font-size: 20px;
   text-align: justify;
 }
+/* --------cv showcase page--------- */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Button styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.image-card:hover .overlay {
+  color: white;
+  opacity: 1; /* Show button on hover */
+}
 /*---------- Responsiveness ----------*/
 @media only screen and (max-width: 768px) {
   .hero-sub-text {
@@ -274,5 +349,12 @@ footer,
   }
   .timeline::before {
     left: -24px;
+  }
+  .process_timeline {
+    gap: 4px;
+  }
+  .process_timeline .step {
+    padding: 5px;
+    font-size: 14px;
   }
 }
