@@ -275,16 +275,16 @@
         </div>
       </nav>
       <!-- banner start -->
-      <section style="height: 50vh">
+      <section style="height: 40vh">
         <div
           class="container-fluid page-banner pt-5 d-flex justify-content-center align-items-center h-100"
         >
-          <h2>Generate your cv</h2>
+          <h5>Generate My Cv</h5>
         </div>
       </section>
     </header>
     <main>
-      <div class="container-fluid mt-5 p-5">
+      <div class="container-fluid p-5">
         <!-- Timeline for Progress -->
         <div id="cv_generate_process" class="process_timeline">
           <div class="col step active" id="step1" onclick="showStep(1)">
@@ -312,10 +312,7 @@
 
         <form id="multiStepForm">
           <!-- Step 1: Account Settings -->
-          <div
-            class="tab-content process-tab-content d-none"
-            id="step-1-content"
-          >
+          <div class="tab-content process-tab-content" id="step-1-content">
             <div
               class="container-fluid bg-white shadow p-md-5 px-3 py-4 rounded"
             >
@@ -705,7 +702,10 @@
             </div>
           </div>
           <!-- Step 2: CV information -->
-          <div class="tab-content process-tab-content" id="step-2-content">
+          <div
+            class="tab-content process-tab-content d-none"
+            id="step-2-content"
+          >
             <section
               class="col-md-12 col-12 input-section bg-white p-md-5 px-3 py-4 shadow rounded"
             >
@@ -725,17 +725,7 @@
               <!-- Skills Section -->
               <div class="row my-4">
                 <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-tools"></i> Skills</h5>
-                    <button
-                      id="add-skill"
-                      class="btn gradient-bg text-white mb-3"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
+                  <h5><i class="fas fa-tools"></i> Skills</h5>
                   <div id="skills-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -744,29 +734,28 @@
                         placeholder="Skill Name"
                         id="skill-1"
                       />
-                      <textarea
-                        id="skill-desc-1"
+                      <input
+                        type="text"
                         class="form-control"
-                        rows="2"
-                        placeholder="Description"
-                      ></textarea>
+                        placeholder="Proficiency (e.g., Beginner, Intermediate, Advanced)"
+                        id="skill-proficiency-1"
+                      />
                     </div>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="add-skill"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
+                    >
+                      <span class="pe-1">Add more skills</span>
+                      <i class="fas fa-plus"></i>
+                    </button>
                   </div>
                 </div>
 
                 <!-- Languages Section -->
                 <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-language"></i> Languages</h5>
-                    <button
-                      id="add-language"
-                      class="btn gradient-bg text-white mb-3"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
+                  <h5><i class="fas fa-language"></i> Languages</h5>
                   <div id="languages-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -778,10 +767,19 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="High/Medium/Low"
+                        placeholder="Proficiency (e.g.,Beginner, Intermediate, Advanced)"
                         id="level-1"
                       />
                     </div>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="add-language"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
+                    >
+                      <span class="pe-1">Add more language</span>
+                      <i class="fas fa-plus"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -789,17 +787,7 @@
               <!-- Work Experience Section -->
               <div class="row my-4">
                 <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-briefcase"></i> Work Experience</h5>
-                    <button
-                      id="add-experience"
-                      class="btn gradient-bg text-white mb-3"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
+                  <h5><i class="fas fa-briefcase"></i> Work Experience</h5>
                   <div id="work-experience-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -808,12 +796,20 @@
                         placeholder="Job Title"
                         id="job-title-1"
                       />
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="2021 - present"
-                        id="year-1"
-                      />
+                      <div class="d-flex gap-4">
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="From Year"
+                          id="from-year-1"
+                        />
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="To Year"
+                          id="to-year-1"
+                        />
+                      </div>
                       <textarea
                         id="job-desc-1"
                         class="form-control"
@@ -822,21 +818,20 @@
                       ></textarea>
                     </div>
                   </div>
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="add-experience"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
+                    >
+                      <span class="pe-1">Add more experience</span>
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
                 </div>
 
                 <!-- Education Section -->
                 <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-graduation-cap"></i> Education</h5>
-                    <button
-                      id="add-education"
-                      class="btn gradient-bg text-white mb-3"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
+                  <h5><i class="fas fa-graduation-cap"></i> Education</h5>
                   <div id="education-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -851,31 +846,44 @@
                         placeholder="Institution Name"
                         id="institution-1"
                       />
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Year"
-                        id="year-edu-1"
-                      />
+
+                      <!-- From Year -->
+                      <div class="d-flex gap-4">
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="from-year-1"
+                          placeholder="From Year"
+                        />
+
+                        <!-- Optional To Year / Present -->
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="to-year-1"
+                          placeholder="To Year"
+                        />
+                      </div>
                     </div>
+                  </div>
+
+                  <!-- Button to Add More Education -->
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="add-education"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
+                    >
+                      <span class="pe-1">Add more education</span>
+                      <i class="fas fa-plus"></i>
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <!-- Certifications and Projects Section -->
+              <!-- Certifications and Reference Section -->
               <div class="row my-4">
                 <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-certificate"></i> Certifications</h5>
-                    <button
-                      id="add-certification"
-                      class="btn gradient-bg text-white mb-3"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </button>
-                  </div>
+                  <h5><i class="fas fa-certificate"></i> Certifications</h5>
                   <div id="certifications-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -898,21 +906,57 @@
                       />
                     </div>
                   </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-project-diagram"></i> Projects</h5>
+                  <div class="d-flex justify-content-end">
                     <button
-                      id="add-project"
-                      class="btn gradient-bg text-white mb-3"
+                      id="add-certification"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
                     >
+                      <span class="pe-1">Add more certificate</span>
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
+                </div>
+                <div class="col-md-6">
+                  <h5><i class="fas fa-user-friends"></i> References</h5>
+                  <div id="references-container" class="mb-4">
+                    <div class="form-group mb-3" id="reference-1">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Reference Name"
+                        id="reference-name-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Designation"
+                        id="designation-1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Contact Information"
+                        id="contact-ref-1"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button
+                      id="add-reference"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
+                      onclick="addReference()"
+                    >
+                      <span class="pe-1">Add more reference</span>
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Project Section -->
+              <!-- <div class="row my-4">
+                <div class="col-md-6">
+                  <h5><i class="fas fa-project-diagram"></i> Projects</h5>
                   <div id="projects-container" class="mb-4">
                     <div class="form-group mb-3">
                       <input
@@ -929,41 +973,17 @@
                       ></textarea>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <!-- References Section -->
-              <div class="row my-4">
-                <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h5><i class="fas fa-user-friends"></i> References</h5>
+                  <div class="d-flex justify-content-end">
                     <button
-                      id="add-reference"
-                      class="btn gradient-bg text-white mb-3"
+                      id="add-language"
+                      class="btn gradient-bg text-white mb-3 text-capitalize"
                     >
+                      <span class="pe-1">Add more project</span>
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <div id="references-container" class="mb-4">
-                    <div class="form-group mb-3">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Reference Name"
-                        id="reference-1"
-                      />
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Contact Information"
-                        id="contact-ref-1"
-                      />
-                    </div>
-                  </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Submit Button -->
               <div>
