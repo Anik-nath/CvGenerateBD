@@ -437,6 +437,7 @@
                               type="email"
                               class="form-control"
                               id="email"
+                              required
                               placeholder="Enter your email"
                             />
                           </div>
@@ -451,38 +452,43 @@
                               type="tel"
                               class="form-control"
                               id="phone"
+                              required
                               placeholder="Enter your phone number"
                             />
                           </div>
                         </div>
-                        <div class="mb-3">
-                          <label for="country" class="form-label"
-                            >Country</label
-                          >
-                          <div class="input-group">
-                            <span class="input-group-text">
-                              <i class="fas fa-globe"></i>
-                            </span>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="country"
-                              placeholder="Enter your country"
-                            />
+                        <div class="d-flex flex-md-row flex-column justify-content-between gap-md-4">
+                          <div class="mb-3 w-100">
+                            <label for="country" class="form-label"
+                              >Country</label
+                            >
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fas fa-globe"></i>
+                              </span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="country"
+                                required
+                                placeholder="Enter your country"
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="city" class="form-label">City</label>
-                          <div class="input-group">
-                            <span class="input-group-text">
-                              <i class="fas fa-city"></i>
-                            </span>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="city"
-                              placeholder="Enter your city"
-                            />
+                          <div class="mb-3 w-100">
+                            <label for="city" class="form-label">City</label>
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="fas fa-city"></i>
+                              </span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="city"
+                                required
+                                placeholder="Enter your city"
+                              />
+                            </div>
                           </div>
                         </div>
                         <div class="mb-3">
@@ -497,7 +503,25 @@
                               type="text"
                               class="form-control"
                               id="address"
+                              required
                               placeholder="Enter your address"
+                            />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="facebook" class="form-label"
+                            >Facebook </label
+                          >
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <i class="fab fa-facebook"></i>
+                            </span>
+                            <input
+                              type="url"
+                              class="form-control"
+                              id="facebook"
+                              required
+                              placeholder="Enter your Facebook URL"
                             />
                           </div>
                         </div>
@@ -560,24 +584,6 @@
                                 class="form-control"
                                 id="linkedin"
                                 placeholder="Enter your LinkedIn URL"
-                              />
-                            </div>
-                          </div>
-
-                          <!-- Facebook -->
-                          <div class="col-md-6 mb-3">
-                            <label for="facebook" class="form-label"
-                              >Facebook</label
-                            >
-                            <div class="input-group">
-                              <span class="input-group-text">
-                                <i class="fab fa-facebook"></i>
-                              </span>
-                              <input
-                                type="url"
-                                class="form-control"
-                                id="facebook"
-                                placeholder="Enter your Facebook URL"
                               />
                             </div>
                           </div>

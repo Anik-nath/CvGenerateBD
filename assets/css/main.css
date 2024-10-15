@@ -71,11 +71,10 @@ html {
 }
 
 /*---------- Navbar Styles ----------*/
-.nav-item .active {
+
+#contactTab .nav-item .active {
+  color: #fff;
   background: linear-gradient(90deg, #00c8aa, #00aac8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 600;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -321,6 +320,16 @@ footer,
 .image-card:hover .overlay {
   color: white;
   opacity: 1; /* Show button on hover */
+}
+#step-1-content .input-group-text {
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+}
+#step-1-content i {
+  color: #fff;
+}
+#contactTab .nav-link{
+color: #000;
+border: 1px solid #ccc;
 }
 /*---------- Responsiveness ----------*/
 @media only screen and (max-width: 768px) {
