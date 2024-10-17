@@ -109,11 +109,14 @@
                 >
                   CV
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="/cv_templates.html"
                       >CV Templates</a
                     >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
                   </li>
                   <li>
                     <a class="dropdown-item" href="/cv_generate.html"
@@ -152,6 +155,42 @@
               >
                 Sign Up
               </a>
+              <div class="dropdown ms-3">
+                <div
+                  class="d-flex text-dark align-items-center dropdown-toggle"
+                  id="profileDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="/assets/img/profile-1.jpg"
+                    alt="Profile Image"
+                    class="rounded-circle"
+                    style="width: 38px; height: 38px"
+                  />
+                </div>
+                <ul
+                  class="dropdown-menu dropdown-menu-end p-3 mt-3"
+                  aria-labelledby="profileDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="/myProfile.html"
+                      >My Profile</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item btn py-2 text-center gradient-bg text-white"
+                    >
+                      Sign Out
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -217,6 +256,11 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/contact.html">Contact Us</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/myProfile.html"
+                      >My Profile</a
+                    >
+                  </li>
                 </ul>
                 <div class="d-flex gap-2 py-2">
                   <a
@@ -236,7 +280,15 @@
                 </div>
               </div>
               <div>
-                <div class="d-flex flex-row gap-3">
+                <h6 class="pb-3">Socila Contact</h6>
+                <div class="d-flex flex-row gap-3 my-2">
+                  <button
+                    class="btn gradient-bg text-light btn-floating m-1"
+                    mailto="cvgeneratebd@gmail.com"
+                    role="button"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </button>
                   <a
                     class="btn gradient-bg text-light btn-floating m-1"
                     href="#!"
@@ -262,10 +314,6 @@
                     ><i class="fab fa-pinterest"></i
                   ></a>
                 </div>
-                <p class="mb-0 py-3 text-muted">
-                  Email: cvgeneratebd@gmail.com
-                </p>
-                <p class="mb-0 text-muted">Phone: +987 1236 54997</p>
               </div>
             </div>
           </div>

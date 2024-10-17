@@ -45,6 +45,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
     />
+    <!-- style for cv -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/timeline.css" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
@@ -257,9 +260,7 @@
                     <a class="nav-link" href="/contact.html">Contact Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/myProfile.html"
-                      >My Profile</a
-                    >
+                    <a class="nav-link" href="/myProfile.html">My Profile</a>
                   </li>
                 </ul>
                 <div class="d-flex gap-2 py-2">
@@ -324,138 +325,370 @@
         <div
           class="container-fluid page-banner pt-5 d-flex justify-content-center align-items-center h-100"
         >
-          <h5>CV Templates</h5>
+          <h5>My Profile</h5>
         </div>
       </section>
     </header>
     <main>
       <div id="cv-template-page" class="container-fluid pb-5 px-5">
-        <div class="row mt-4">
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (1).jpg"
-                alt="Image 1"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
+        <div class="row mt-md-3">
+          <!-- Left Profile Section -->
+          <div class="col-md-4 col-12">
+            <div class="row shadow me-md-2 mt-5 mt-md-0">
+              <div class="col-12">
+                <div class="text-center p-md-5 p-3">
+                  <img
+                    class="img-fluid rounded-circle w-75 border border-info p-2"
+                    src="/assets/img/profile-1.jpg"
+                    alt="Profile Image"
+                  />
+                  <h5 class="my-3 fw-bold text-uppercase">Alex Hales</h5>
+                  <p>Address: ABCD road, 231 House, Chittagong, Bangladesh.</p>
+                  <!-- Button to open modal for editing info -->
+                  <button
+                    class="btn gradient-bg text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editInfoModal"
+                  >
+                    Edit Info
+                  </button>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="px-md-5 p-3">
+                  <h6 class="fw-bold mb-4">Social Contact</h6>
+
+                  <!-- Social contact list -->
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="d-flex fw-semibold gap-2 align-items-center">
+                      <i class="fab fa-facebook"></i>Facebook
+                    </p>
+                    <p class="text-muted">www.facebook.com</p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="d-flex fw-semibold gap-2 align-items-center">
+                      <i class="fab fa-linkedin"></i>LinkedIn
+                    </p>
+                    <p class="text-muted">www.linkedin.com</p>
+                  </div>
+
+                  <!-- Edit Social Contact Button -->
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn gradient-bg text-white"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#editSocialContactModal"
+                    >
+                      Edit Social Contact
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-md-8 col-12 mt-5 mt-md-0 shadow rounded">
+            <div class="row g-4">
+              <!-- Personal Information -->
+              <div class="col-12 p-4 p-md-5">
+                <h6 class="fw-bold pb-3">Personal Information</h6>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">Display Name:</div>
+                  <div class="col-md-8 col-7 text-capitalize">Alex Hales</div>
+                </div>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">Full Name:</div>
+                  <div class="col-md-8 col-7 text-capitalize">
+                    Alex Roy Hales
+                  </div>
+                </div>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">Email:</div>
+                  <div class="col-md-8 col-7 text-capitalize">
+                    alex.hales@example.com
+                  </div>
+                </div>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">Country:</div>
+                  <div class="col-md-8 col-7 text-capitalize">Bangladesh</div>
+                </div>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">City:</div>
+                  <div class="col-md-8 col-7 text-capitalize">Chittagong</div>
+                </div>
+                <div class="row mt-4 border rounded py-2">
+                  <div class="col-md-4 col-5 fw-bold">Phone:</div>
+                  <div class="col-md-8 col-7 text-capitalize">
+                    +880123456789
+                  </div>
+                </div>
+              </div>
 
-          <div
-            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
-            data-aos="fade-down"
-          >
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (2).jpg"
-                alt="Image 2"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
+              <!-- Recent Documents Section -->
+              <div class="col-12 p-5">
+                <h6 class="fw-bold pb-3">Recent Documents</h6>
+                <!-- Recent Edited Documents -->
+                <div class="document-list">
+                  <!-- Recent CV Card -->
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div
+                        class="card position-relative mb-4 rounded"
+                        style="
+                          height: 300px;
+                          background-image: url('/assets/img/cv/cv%20(1).jpg');
+                          background-size: cover;
+                          background-position: center;
+                        "
+                      >
+                        <!-- Black overlay -->
+                        <div
+                          class="position-absolute top-0 start-0 w-100 h-100 rounded"
+                          style="background-color: rgba(0, 0, 0, 0.5)"
+                        ></div>
+
+                        <!-- Modified Date on bottom-left -->
+                        <div
+                          class="position-absolute bottom-0 start-0 p-2 text-white fw-bold"
+                          style="
+                            background-color: rgba(0, 0, 0, 0.6);
+                            z-index: 1;
+                          "
+                        >
+                          Modified: Oct 15, 2024
+                        </div>
+
+                        <!-- Clickable CV Link -->
+                        <a
+                          class="text-decoration-none cursor-pointer"
+                          href="cv_generate.html"
+                          style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 0;
+                          "
+                        >
+                          <!-- Empty block to cover the card for the anchor -->
+                        </a>
+
+                        <!-- Options icon on top-right (outside of anchor) -->
+                        <div
+                          class="position-absolute top-0 end-0 p-2"
+                          style="z-index: 1"
+                        >
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-light"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <li>
+                                <a class="dropdown-item" href="cv_generate.html"
+                                  >Edit</a
+                                >
+                              </li>
+                              <li>
+                                <button class="dropdown-item">Delete</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (3).jpg"
-                alt="Image 3"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
+        <!-- Modal for Editing Personal Information -->
+        <div
+          class="modal fade"
+          id="editInfoModal"
+          tabindex="-1"
+          aria-labelledby="editInfoModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editInfoModalLabel">
+                  Edit Personal Information
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="displayName" class="form-label"
+                      >Display Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="displayName"
+                      value="Alex Hales"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      value="Alex Roy Hales"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="pro-img" class="form-label"
+                      >Profile image</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pro-img"
+                      value="https://abcedge.jpg"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      value="alex.hales@example.com"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      value="Bangladesh"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      value="Chittagong"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      value="+880123456789"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
                 >
+                  Close
+                </button>
+                <button type="button" class="btn gradient-bg text-white">
+                  Save Changes
+                </button>
               </div>
             </div>
           </div>
-
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (4).jpg"
-                alt="Image 4"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
+        </div>
+        <!-- Modal for Editing Social Contact -->
+        <div
+          class="modal fade"
+          id="editSocialContactModal"
+          tabindex="-1"
+          aria-labelledby="editSocialContactModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editSocialContactModalLabel">
+                  Edit Social Contact
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-            </div>
-          </div>
+              <div class="modal-body">
+                <form>
+                  <!-- Facebook link -->
+                  <div class="mb-3">
+                    <label for="facebookLink" class="form-label"
+                      >Facebook URL</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="facebookLink"
+                      value="www.facebook.com"
+                      required
+                    />
+                  </div>
 
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (5).jpg"
-                alt="Image 5"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
-              </div>
-            </div>
-          </div>
+                  <!-- LinkedIn link -->
+                  <div class="mb-3">
+                    <label for="linkedinLink" class="form-label"
+                      >LinkedIn URL</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="linkedinLink"
+                      value="www.linkedin.com"
+                      required
+                    />
+                  </div>
 
-          <div
-            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
-            data-aos="zoom-out"
-          >
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (1).jpg"
-                alt="Image 6"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (2).jpg"
-                alt="Image 7"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
-            data-aos="fade-down"
-          >
-            <div class="image-card">
-              <img
-                class="img-fluid"
-                src="/assets/img/cv/cv (3).jpg"
-                alt="Image 8"
-              />
-              <div class="overlay">
-                <a href="/cv_generate.html" class="btn gradient-bg text-white"
-                  >Create My CV</a
-                >
+                  <!-- Save changes button -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn gradient-bg text-white">
+                      Save Changes
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -465,13 +698,9 @@
     <footer>
       <div class="pt-5 px-4">
         <div class="text-center text-lg-start text-white">
-          <!-- Grid container -->
           <div class="p-4 pb-0">
-            <!-- Section: Links -->
             <section class="">
-              <!--Grid row-->
               <div class="row">
-                <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                   <h5 class="text-capitalize">CvGenerateBD</h5>
 
