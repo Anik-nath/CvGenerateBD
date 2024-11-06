@@ -52,12 +52,12 @@ html {
 /*---------- Banner Section ----------*/
 #featured-cv,
 .banner {
-  background-image: url("/assets/img/banner3.png");
+  background-image: url("/assets/img/background/banner3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .page-banner {
-  background-image: url("/assets/img/background/CV\ Templates.png");
+  background-image: url("/assets/img/background/page-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -93,13 +93,6 @@ html {
 }
 #portfolio-page .nav-link:hover {
   background: #a7a6a6 !important;
-}
-
-/*---------- Home Tab Styles ----------*/
-.home-tab {
-  background-image: url("/assets/img/5594016-e1656071131636.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /*---------- Accordion Styles ----------*/
@@ -186,7 +179,7 @@ footer,
 
 /*---------- Contact Form ----------*/
 .contact-form {
-  background-image: url("/assets/img/background/bg\ \(1\).jpg");
+  background-image: url("/assets/img/background/contact-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -327,9 +320,9 @@ footer,
 #step-1-content i {
   color: #fff;
 }
-#contactTab .nav-link{
-color: #000;
-border: 1px solid #ccc;
+#contactTab .nav-link {
+  color: #000;
+  border: 1px solid #ccc;
 }
 /*---------- Responsiveness ----------*/
 @media only screen and (max-width: 768px) {
@@ -366,4 +359,64 @@ border: 1px solid #ccc;
     padding: 5px;
     font-size: 14px;
   }
+}
+/* Preloader */
+.preloader {
+  align-items: center;
+  background: linear-gradient(90deg, #00c8aa, #00aac8);
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.2s linear;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  opacity: 1;
+  transform: opacity 1s linear;
+}
+.loader {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 4px solid #ffffff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  background-color: #ffffff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0%,
+  50% {
+    transform: rotate(0deg);
+  }
+  25%,
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0%,
+  25% {
+    height: 0%;
+  }
+  50%,
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.content-hidden {
+  overflow: hidden;
 }

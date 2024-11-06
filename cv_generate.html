@@ -10,25 +10,12 @@
       type="image/x-icon"
     />
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/hero.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css" />
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./assets/fontawesome-6.6.0-web/css/all.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,18 +24,12 @@
       rel="stylesheet"
     />
     <!-- animation library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-    />
+    <link rel="stylesheet" href="./assets/animate/animate.min.css" />
+    <link rel="stylesheet" href="./assets/aos/aos.css" />
     <!-- style for cv -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/timeline.css" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/aos/aos.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
@@ -70,7 +51,7 @@
           >
             <img
               style="width: 200px; height: 46px"
-              src="/assets/img/logo/crop LOGO-CV-GEN-2.png"
+              src="/assets/img/logo/Cv-generate-bd-logo.png"
               alt="logo"
             />
           </a>
@@ -167,7 +148,7 @@
                   aria-expanded="false"
                 >
                   <img
-                    src="/assets/img/profile-1.jpg"
+                    src="/assets/img/Profile/profile-1.jpg"
                     alt="Profile Image"
                     class="rounded-circle"
                     style="width: 38px; height: 38px"
@@ -177,6 +158,11 @@
                   class="dropdown-menu dropdown-menu-end p-3 mt-3"
                   aria-labelledby="profileDropdown"
                 >
+                  <li>
+                    <a class="dropdown-item" href="/dashboard/index.html"
+                      >Dashboard</a
+                    >
+                  </li>
                   <li>
                     <a class="dropdown-item" href="/myProfile.html"
                       >My Profile</a
@@ -260,9 +246,7 @@
                     <a class="nav-link" href="/contact.html">Contact Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/myProfile.html"
-                      >My Profile</a
-                    >
+                    <a class="nav-link" href="/myProfile.html">My Profile</a>
                   </li>
                 </ul>
                 <div class="d-flex gap-2 py-2">
@@ -505,7 +489,9 @@
                             />
                           </div>
                         </div>
-                        <div class="d-flex flex-md-row flex-column justify-content-between gap-md-4">
+                        <div
+                          class="d-flex flex-md-row flex-column justify-content-between gap-md-4"
+                        >
                           <div class="mb-3 w-100">
                             <label for="country" class="form-label"
                               >Country</label
@@ -558,8 +544,8 @@
                         </div>
                         <div class="mb-3">
                           <label for="facebook" class="form-label"
-                            >Facebook </label
-                          >
+                            >Facebook
+                          </label>
                           <div class="input-group">
                             <span class="input-group-text">
                               <i class="fab fa-facebook"></i>
@@ -1384,7 +1370,7 @@
                     <div>
                       <img
                         class="img-fluid rounded"
-                        src="/assets/img/png-transparent-paypal.png"
+                        src="/assets/img/background/payment-option-image.png"
                         alt=""
                       />
                     </div>
@@ -1422,17 +1408,21 @@
         </div>
       </div>
     </footer>
+    <!-- preloader -->
+    <div class="preloader">
+      <!-- Preloader -->
+      <div class="loader">
+        <div class="loader-inner"></div>
+      </div>
+    </div>
     <!-- bootstrap js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/hero-carousel.js"></script>
     <script src="./assets/js/featuredCv.js"></script>
     <script src="./assets/js/navbarTop.js"></script>
+    <script src="./assets/js/preloader.js"></script>
     <script src="./assets/js/cv_generate_process.js"></script>
     <script src="./assets/js/cv_information.js"></script>
     <script>
